@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<header>
+    <!-- Indicamos la navegación entre nuestro sitio -->
+    <nav>
+        <a href="./index.html">Inicio</a>
+       
+    </nav>
+  </header>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <center>
+        <img src="images.jpg" alt="signup.com" width="10%">
+    </center>
+<!-- esqueleto -->
+    <!-- Usuario -->
+    <form id="formuser">
+        <div class="container">
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label"> User </label>
+                <div class="col"><input type="text" id="user" class="form-control"></div>
+            </div>
+
+            <!-- emial -->
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label"> Mail </label>
+                    <div class="col"><input type="email" id="mail" class="form-control"></div>
+                </div>
+
+            <!-- password -->
+            <div class="container">
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label"> Password </label>
+                    <div class="col"><input type="password" id="password" class="form-control"></div>
+                </div>
+            </div>
+
+            <div class="md=10">
+                <small id="notificaciones" class="text-danger"></small>
+            </div>
+
+            <!-- repassword -->
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label"> Repassword </label>
+                    <div class="col"><input type="password" id="repassword" class="form-control"
+                            onkeyup="contraseña();"></div>
+                </div>
+            </div>
+
+            <center>
+                <!-- boton para ingresar -->
+                <div class="form-group row">
+                    <div class="col-sm-10">
+                        <button type="button" class="btn btn-primary" id="boton" onclick="usuario();">Sign up</button>
+                    </div>
+                </div>
+            </center>
+        </div>
+    </form>
+    <!-- NUEVO USUARIO -->
+
+    <div class="container" id="nusuario" style="display: none;">
+
+        <form id="nuevore">
+            <title></title>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label"> Nuevo usuario </label>
+                <div class="col">
+                    <input type="text" class="form-control" id="usuarion">
+                </div>
+            </div>
+
+            <!-- email -->
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label"> Email </label>
+                <div class="col">
+                    <input type="text" class="form-control" id="nemail">
+                </div>
+            </div>
+
+            <!-- boton reset -->
+            <div class="form-group row">
+                <div class="col-sm-10">
+                    <button type="button" class="btn btn-primary" id="botonreset" onclick="limpia();"> Reset </button>
+                </div>
+            </div>
+        </form>
+        <!-- unir java script -->
+        <script src="./operaciones.js/signup.js"></script>
+
+</body>
+
+</html>
